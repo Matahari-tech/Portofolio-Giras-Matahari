@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giras Matahari | Front-End UI/UX Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandCream: '#FDFBF7',
+                        brandBlue: '#1B262C',
+                        brandYellow: '#FFD95A',
+                        brandRed: '#FF6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandCream text-brandBlue font-['Poppins']">
+
+    <nav class="fixed top-0 w-full z-50 bg-brandCream/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/components/images/Logo-Sun.png" alt="Logo" class="w-10 h-10 object-contain rounded-full">
+            </div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="border-b-2 border-brandYellow text-brandBlue">Landing</a>
+                <a href="about.html" class="hover:text-brandRed transition">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="pt-32 pb-0 px-6 lg:px-20 reveal">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+                
+                <div class="pb-12 lg:pb-20">
+                    <p class="font-medium mb-2" style="color: #082844">I'm Giras Matahari</p>
+                    <h1 class="text-5xl lg:text-5xl font-bold leading-tight mb-6" style="color: #082844">
+                        Front-End <br> <span>UI/UX Developer</span>
+                    </h1>
+                    <p class="text-gray-500 text-lg mb-8 max-w-md">
+                        Membantu perusahaan mengembangkan situs web atau aplikasi mobile untuk berkembang lebih besar dengan ketelitian dan perhatian.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="#projects" class="bg-brandYellow px-8 py-3 rounded-xl font-bold shadow-md hover:scale-105 transition">Explore Now</a>
+                        
+                        <a href="assets/components/pdf/CV_ATS_GIRAS_MATAHARI.pdf" target="_blank" class="font-semibold flex items-center gap-2 hover:text-brandRed transition">
+                            My Curriculum Vitae <span class="text-xl">↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="w-80 h-80 lg:w-[450px] lg:h-[450px] bg-brandRed rounded-t-full relative overflow-hidden flex items-end">
+                        <img src="assets/components/images/foto.png" alt="Profile" class="w-full h-auto z-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-brandBlue py-6 overflow-hidden whitespace-nowrap mb-20">
+            <div class="flex justify-around items-center text-white text-xs lg:text-sm font-bold tracking-widest uppercase">
+                <span>PROTOTYPE</span> <span class="text-brandYellow">★</span>
+                <span>MARKETING</span> <span class="text-brandYellow">★</span>
+                <span>DEVELOPMENT</span> <span class="text-brandYellow">★</span>
+                <span>RESEARCH</span> <span class="text-brandYellow">★</span>
+                <span>QUALITY ASSURANCE</span>
+            </div>
+        </div>
+
+        <section id="projects" class="py-20 px-6 lg:px-20 reveal">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="grid grid-cols-2 gap-6 items-start"> <div class="space-y-6">
+                    <img src="assets/components/images/project-1.jpeg" class="rounded-3xl h-64 w-full object-cover shadow-lg" alt="Work">
+                    <img src="assets/components/images/project-3.png" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Work">
+                </div>
+                
+                <div class="space-y-6 pt-12"> <img src="assets/components/images/project-2.jpeg" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Work">
+                    <img src="assets/components/images/project-4.png" class="rounded-3xl h-64 w-full object-cover shadow-lg" alt="Work">
+                </div>
+            </div>
+                <div>
+                    <p class="text-gray-500 font-medium mb-2">Alasan Mengapa</p>
+                    <h2 class="text-4xl font-bold mb-8 leading-tight">Saya Mungkin Hebat <br> untuk Bisnis Anda</h2>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3 font-medium">
+                            <span class="w-6 h-6 flex items-center justify-center bg-brandYellow rounded-full text-[12px] font-bold shrink-0 mt-0.5">
+                                ✔
+                            </span>
+                            <span>Saya membuat desain dan kode untuk kualitas yang lebih baik</span>
+                        </li>
+                        <li class="flex items-start gap-3 font-medium">
+                            <span class="w-6 h-6 flex items-center justify-center bg-brandYellow rounded-full text-[12px] font-bold shrink-0 mt-0.5">
+                                ✔
+                            </span>
+                            <span>Saya menghargai kerja sama tim dan kepemimpinan</span>
+                        </li>
+                        <li class="flex items-start gap-3 font-medium">
+                            <span class="w-6 h-6 flex items-center justify-center bg-brandYellow rounded-full text-[12px] font-bold shrink-0 mt-0.5">
+                                ✔
+                            </span>
+                            <span>Saya selalu memulai dari penelitian</span>
+                        </li>
+                    </ul>
+                    <a href="project-detail.html?id=1" class="bg-brandYellow px-10 py-4 rounded-xl font-bold shadow-lg inline-block hover:bg-yellow-400 transition">Check My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 lg:px-20 bg-gray-100 rounded-[50px] mx-6 lg:mx-20 mb-20 reveal">
+            <div class="max-w-7xl mx-auto text-center mb-12">
+                <p class="text-gray-500 font-medium">Here's My</p>
+            </div>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12" style="color: #082844">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold uppercase tracking-widest text-center mb-6">Soft Skills</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">🧠 <span class="font-medium">Critical Thinking & Logical Thinking</span></div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">🤝 <span class="font-medium">Teamwork & Communication</span></div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">⏳ <span class="font-medium">Time Management & Adaptif</span></div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">💡 <span class="font-medium">Problem-solving</span></div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold uppercase tracking-widest text-center mb-6">Hard Skills</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">📦 <span class="font-medium">Microsoft Office (Word, Excel & Power Point)</span></div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">🎨 <span class="font-medium">UI/UX Web & Mobile (Figma), Logo Design, Canva</span></div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">💻 <span class="font-medium">Front-End (HTML, CSS, JS, Tailwind, PHP)</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brandBlue text-white py-12 px-6 text-center">
+        <p class="opacity-50 text-sm">© 2026 Giras Matahari. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* Custom Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Rounded specifics */
+.rounded-blob {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Checkbox Color */
+.brand-check {
+    background-color: #FFD95A;
+}

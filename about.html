@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Giras Matahari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandCream: '#FDFBF7', brandBlue: '#1B262C', brandYellow: '#FFD95A', brandRed: '#FF6B6B', } } } }
+    </script>
+</head>
+<body class="bg-brandCream font-['Poppins']">
+
+    <nav class="fixed top-0 w-full z-50 bg-brandCream/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/components/images/Logo-Sun.png" alt="Logo" class="w-10 h-10 object-contain rounded-full">
+            </div>
+            <div class="flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-brandRed transition">Landing</a>
+                <a href="about.html" class="border-b-2 border-brandYellow text-brandBlue">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center p-6 bg-brandCream pt-24">
+        <div class="bg-gray-200 rounded-[40px] p-8 lg:p-16 max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-start reveal">
+            
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -inset-4 bg-brandYellow rounded-[30%_70%_70%_30%/30%_30%_70%_70%] opacity-70 z-0"></div>
+                <img src="assets/components/images/about-foto.JPG" class="relative z-10 rounded-3xl w-full transition duration-500 shadow-xl" alt="About Giras">
+            </div>
+
+            <div class="lg:col-span-7 text-brandBlue">
+                <h1 class="text-5xl font-bold mb-4 leading-none">ABOUT ME</h1>
+                <p class="font-bold mb-6 text-black tracking-widest uppercase text-sm">Giras Matahari - Front-End UI/UX Developer</p>
+                <p class="text-gray-700 leading-relaxed mb-8">
+                    Currently graduated with a background in Software Engineering Application and Informatics. I possess a solid understanding of software development concepts and practical skills that enable me to contribute effectively in a professional environment.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/giras._" target="_blank" 
+                    class="w-12 h-12 border-2 border-brandBlue rounded-full flex items-center justify-center hover:bg-brandBlue hover:text-white transition group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a href="https://linkedin.com/in/girasmatahari" target="_blank" 
+                    class="w-12 h-12 border-2 border-brandBlue rounded-full flex items-center justify-center hover:bg-brandBlue hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+
+                    <a href="https://wa.me/6282116218252" target="_blank" 
+                    class="w-12 h-12 border-2 border-brandBlue rounded-full flex items-center justify-center hover:bg-brandBlue transition group">
+                        <img src="assets/components/icons/whatsapp-logo.png" 
+                            alt="WhatsApp" 
+                            class="w-6 h-6 object-contain group-hover:brightness-0 group-hover:invert transition">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
