@@ -62,7 +62,7 @@
                     <h1 id="projectTitle" class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                         Loading...
                     </h1>
-                    <p id="projectDescription" class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    <p id="projectDescription" class="text-gray-600 text-lg mb-8 leading-relaxed text-justify">
                         </p>
                     
                     <div class="grid grid-cols-2 gap-8 border-t border-gray-200 pt-8">
@@ -92,7 +92,7 @@
                                 <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
                                 <div class="w-3 h-3 rounded-full bg-green-400"></div>
                             </div>
-                            <img src="assets/components/images/project-1.jpeg" class="w-full h-auto" alt="Web Preview">
+                            <img id="webMockupImg" src="assets/components/images/project-1.jpeg" class="w-full h-auto" alt="Web Preview">
                         </div>
                     </div>
                 </div>
@@ -128,26 +128,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <a href="project-detail.html?type=mobile" class="group block bg-white rounded-[32px] p-4 shadow-sm hover:shadow-xl transition-all duration-500">
-                        <div class="overflow-hidden rounded-[24px] mb-4">
-                            <img src="assets/components/images/telu metaverse.png" alt="Metaverse" class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700">
-                        </div>
-                        <h3 class="font-bold group-hover:text-brandRed transition">Tel-U Metaverse</h3>
-                    </a>
-                    <a href="project-detail.html?type=web" class="group block bg-white rounded-[32px] p-4 shadow-sm hover:shadow-xl transition-all duration-500">
-                        <div class="overflow-hidden rounded-[24px] mb-4">
-                            <img src="assets/components/images/hotel-3.jpeg" alt="Hotel System" class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700">
-                        </div>
-                        <h3 class="font-bold group-hover:text-brandRed transition">Hotel Sawunggaling</h3>
-                    </a>
-                    <a href="project-detail.html?type=workout" class="group block bg-white rounded-[32px] p-4 shadow-sm hover:shadow-xl transition-all duration-500">
-                        <div class="overflow-hidden rounded-[24px] mb-4">
-                            <img src="assets/components/images/Logo-HomeWorkout.png" alt="Home Workout" class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700">
-                        </div>
-                        <h3 class="font-bold group-hover:text-brandRed transition">Home Workout App</h3>
-                    </a>
-                </div>
+                <div id="relatedWorks" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             </div>
         </div>
     </main>
@@ -165,6 +146,7 @@
             mob: document.getElementById('mobileMockup'),
             web: document.getElementById('webMockup'),
             mainImg: document.getElementById('mainMockupImg'),
+            webImg: document.getElementById('webMockupImg'),
             g1: document.getElementById('gal-1'),
             g2: document.getElementById('gal-2'),
             g3: document.getElementById('gal-3'),
@@ -179,7 +161,9 @@
             elements.title.innerText = "Tel-U Metaverse";
             elements.category.innerText = "Mobile Application";
             elements.tech.innerText = "Figma, Unity, C#, Mozilla Hubs";
-            elements.desc.innerText = "Aplikasi TelU Verse merupakan aplikasi sebuah aplikasi yang terdiri dari beberapa teknologi seperti Augmented Reality (AR), Virtual Reality (VR), dan Geolocation.";
+            elements.desc.innerText =
+                "Aplikasi TelU Verse merupakan aplikasi sebuah aplikasi yang terdiri dari beberapa teknologi seperti " +
+                "Augmented Reality (AR), Virtual Reality (VR), dan Geolocation.";
             
             elements.g1.src = "assets/components/images/metaverse.png";
             elements.g2.src = "assets/components/images/metaverse-2.png";
@@ -194,27 +178,104 @@
             elements.title.innerText = "Home Workout App";
             elements.category.innerText = "Mobile Application";
             elements.tech.innerText = "Figma, Android Studio, Kotlin, Firebase";
-            elements.desc.innerText = "Aplikasi Home Workout dirancang untuk membantu pengguna tetap bugar di rumah dengan panduan latihan harian tanpa alat. Fokus pada user experience yang memotivasi dan pelacakan progres yang intuitif.";
+            elements.desc.innerText =
+                "Aplikasi Home Workout dirancang untuk membantu pengguna tetap bugar di rumah dengan panduan latihan " +
+                "harian tanpa alat. Fokus pada user experience yang memotivasi dan pelacakan progres yang intuitif.";
             
             elements.g1.src = "assets/components/images/workout-1.png";
             elements.g2.src = "assets/components/images/workout-5.png";
             elements.g3.src = "assets/components/images/workout-6.png";
             elements.g4.src = "assets/components/images/workout-7.png";
 
+        } else if (projectType === 'sipetam') {
+            // === SIPETAM ===
+            elements.web.classList.remove('hidden');
+            elements.webImg.src = "assets/components/images/sipetam-1.png";
+            elements.tag.innerText = "Website Development";
+            elements.title.innerText = "SIPETAM";
+            elements.category.innerText = "Web Development";
+            elements.tech.innerText = "PHP, JavaScript, HTML, css";
+            elements.desc.innerText =
+                "SIPETAM (Sistem Pemesanan Tanah Makam) adalah aplikasi berbasis web yang mendigitalkan manajemen pemakaman " +
+                "dari awal hingga akhir — mulai dari mengatur blok dan petak pemakaman dengan status ketersediaan real-time, " +
+                "mencatat data ahli waris dan almarhum, pemesanan petak, hingga pemrosesan pembayaran (uang muka, cicilan, " +
+                "dan pembayaran penuh) lengkap dengan cetak struk, serta menghasilkan laporan keuangan yang bisa diekspor ke " +
+                "PDF dan Excel. Sistem ini memiliki kontrol akses berbasis peran untuk tiga jenis pengguna (Admin, Keuangan, " +
+                "dan Manajer), alur persetujuan harga bertingkat dengan riwayat perubahan lengkap, notifikasi di dalam " +
+                "aplikasi, dan dashboard analitik yang merangkum okupansi petak dan pembayaran yang tertunda.";
+
+            elements.g1.src = "assets/components/images/sipetam-1.png";
+            elements.g2.src = "assets/components/images/logo-itb.jpeg";
+            elements.g3.src = "assets/components/images/logo-imp.jpeg";
+            elements.g4.src = "assets/components/images/logo-gajah.png";
+
+        } else if (projectType === 'scfs') {
+            // === SCFS ===
+            elements.web.classList.remove('hidden');
+            elements.webImg.src = "assets/components/images/logo-trevora.png";
+            elements.tag.innerText = "Website Development";
+            elements.title.innerText = "SCFS";
+            elements.category.innerText = "Web Development";
+            elements.tech.innerText = "PHP 8.3, SQL (MySQL), JavaScript (ES6+), HTML5, CSS3, Laravel 12, Livewire 4, TailwindCSS 3, Vite 7, MySQL (Eloquent ORM), Redis";
+            elements.desc.innerText =
+                "Saya terlibat dalam pengembangan SCFS (Supply Chain Financing System), sebuah platform digital yang " +
+                "menyederhanakan proses kerja sama antara perusahaan pembeli dan para pemasoknya — mulai dari pemesanan " +
+                "barang, persetujuan, pemantauan pengiriman, hingga penyelesaian pembayaran, semuanya dalam satu sistem " +
+                "yang rapi dan transparan.";
+
+            elements.g1.src = "assets/components/images/scfs-5.png";
+            elements.g2.src = "assets/components/images/scfs-1.jpeg";
+            elements.g3.src = "assets/components/images/scfs-2.jpeg";
+            elements.g4.src = "assets/components/images/scfs-3.jpeg";
+            elements.g4.src = "assets/components/images/scfs-4.png";
+
         } else {
             // === HOTEL SAWUNGGALING (DEFAULT) ===
             elements.web.classList.remove('hidden');
+            elements.webImg.src = "assets/components/images/project-1.jpeg";
             elements.tag.innerText = "Website Development";
             elements.title.innerText = "Hotel Sawunggaling Dashboard";
             elements.category.innerText = "Web Development";
             elements.tech.innerText = "Figma, PHP, Laravel, CSS, SQL, Vue JS";
-            elements.desc.innerText = "Membangun sistem monitoring hotel berbasis web yang menampilkan status dan tipe kamar, serta informasi housekeeping dan tamu secara real time.";
+            elements.desc.innerText =
+                "Membangun sistem monitoring hotel berbasis web yang menampilkan status dan tipe kamar, serta " +
+                "informasi housekeeping dan tamu secara real time.";
 
             elements.g1.src = "assets/components/images/hotel-3.jpeg";
             elements.g2.src = "assets/components/images/hotel-1.jpg";
             elements.g3.src = "assets/components/images/hotel-2.png";
             elements.g4.src = "assets/components/images/hotel-4.jpeg";
         }
+
+        // === RELATED WORKS ===
+        // Menampilkan project lain, project yang sedang dibuka tidak ikut ditampilkan
+        const allProjects = [
+            { type: 'mobile', name: 'Tel-U Metaverse', thumb: 'assets/components/images/telu metaverse.png' },
+            { type: 'web', name: 'Hotel Sawunggaling', thumb: 'assets/components/images/hotel-3.jpeg' },
+            { type: 'workout', name: 'Home Workout App', thumb: 'assets/components/images/Logo-HomeWorkout.png' },
+            { type: 'sipetam', name: 'SIPETAM', thumb: 'assets/components/images/sipetam-1.png' },
+            { type: 'scfs', name: 'SCFS', thumb: 'assets/components/images/scfs-1.png' }
+        ];
+
+        const currentType = allProjects.some(p => p.type === projectType) ? projectType : 'web';
+
+        document.getElementById('relatedWorks').innerHTML = allProjects
+            .filter(p => p.type !== currentType)
+            .map(p => `
+                <a href="project-detail.html?type=${p.type}" class="group block bg-white rounded-[32px] p-4 shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="overflow-hidden rounded-[24px] mb-4">
+                        <img src="${p.thumb}" alt="${p.name}" class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <h3 class="font-bold group-hover:text-brandRed transition">${p.name}</h3>
+                </a>
+            `).join('');
+
+        // Fallback bila file gambar project belum tersedia
+        document.querySelectorAll('main img').forEach(img => {
+            img.addEventListener('error', () => {
+                img.src = "assets/components/images/project-2.jpeg";
+            }, { once: true });
+        });
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
