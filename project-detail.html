@@ -46,7 +46,10 @@
                 <img src="assets/components/images/Logo-Sun.png" alt="Logo" class="w-10 h-10 object-contain rounded-full">
             </div>
             </a>
-            <a href="index.html" class="text-sm font-bold hover:text-brandRed transition">← Back to Home</a>
+            <div class="flex items-center gap-6 font-medium text-sm">
+                <a href="projects.html" class="font-bold hover:text-brandRed transition">← Back to Projects</a>
+                <a href="index.html" class="hidden md:inline hover:text-brandRed transition">Home</a>
+            </div>
         </div>
     </nav>
 
@@ -254,7 +257,7 @@
             { type: 'web', name: 'Hotel Sawunggaling', thumb: 'assets/components/images/hotel-3.jpeg' },
             { type: 'workout', name: 'Home Workout App', thumb: 'assets/components/images/Logo-HomeWorkout.png' },
             { type: 'sipetam', name: 'SIPETAM', thumb: 'assets/components/images/sipetam-1.png' },
-            { type: 'scfs', name: 'SCFS', thumb: 'assets/components/images/scfs-1.png' }
+            { type: 'scfs', name: 'SCFS', thumb: 'assets/components/images/scfs-5.png' }
         ];
 
         const currentType = allProjects.some(p => p.type === projectType) ? projectType : 'web';

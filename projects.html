@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Giras Matahari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandCream: '#FDFBF7',
+                        brandBlue: '#082844',
+                        brandYellow: '#FFD95A',
+                        brandRed: '#FF6B6B',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .filter-btn.active {
+            background-color: #FFD95A;
+            color: #082844;
+        }
+    </style>
+</head>
+<body class="bg-brandCream text-brandBlue">
+
+    <nav class="fixed top-0 w-full z-50 bg-brandCream/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/components/images/Logo-Sun.png" alt="Logo" class="w-10 h-10 object-contain rounded-full">
+            </a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-brandRed transition">Landing</a>
+                <a href="projects.html" class="border-b-2 border-brandYellow text-brandBlue">Projects</a>
+                <a href="about.html" class="hover:text-brandRed transition">About</a>
+            </div>
+            <a href="index.html" class="md:hidden text-sm font-bold hover:text-brandRed transition">← Back</a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+
+            <header class="reveal mb-14">
+                <p class="text-brandRed font-bold text-xs uppercase tracking-[0.3em] mb-3">My Portfolio</p>
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Project yang <br class="hidden lg:block"> Sudah Saya Buat
+                </h1>
+                <p class="text-gray-600 text-lg max-w-2xl leading-relaxed text-justify">
+                    Kumpulan karya dari proses desain sampai implementasi — mulai dari aplikasi mobile,
+                    sistem informasi berbasis web, hingga platform internal perusahaan.
+                    Klik salah satu project untuk melihat detailnya.
+                </p>
+                <div class="w-20 h-1.5 bg-brandYellow rounded-full mt-8"></div>
+            </header>
+
+            <div class="reveal flex flex-wrap items-center gap-3 mb-12">
+                <button data-filter="all" class="filter-btn active px-6 py-2.5 rounded-xl font-semibold text-sm bg-white shadow-sm hover:shadow-md transition">
+                    All Projects
+                </button>
+                <button data-filter="Web Development" class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm bg-white shadow-sm hover:shadow-md transition">
+                    Web Development
+                </button>
+                <button data-filter="Mobile Application" class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm bg-white shadow-sm hover:shadow-md transition">
+                    Mobile Application
+                </button>
+                <span id="projectCount" class="ml-auto text-sm text-gray-400 font-medium"></span>
+            </div>
+
+            <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+            <div id="emptyState" class="hidden text-center py-20 text-gray-400 font-medium">
+                Belum ada project pada kategori ini.
+            </div>
+
+            <div class="reveal mt-24 bg-brandBlue text-white rounded-[40px] px-8 lg:px-16 py-14 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Tertarik Bekerja Sama?</h2>
+                <p class="opacity-70 max-w-xl mx-auto mb-8">
+                    Saya terbuka untuk peluang baru, kolaborasi, maupun project freelance.
+                    Mari diskusikan kebutuhan Anda.
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    <a href="https://wa.me/6282116218252" target="_blank"
+                       class="bg-brandYellow text-brandBlue px-8 py-3 rounded-xl font-bold shadow-lg hover:scale-105 transition">
+                        Hubungi Saya
+                    </a>
+                    <a href="assets/components/pdf/CV_ATS_GIRAS_MATAHARI.pdf" target="_blank"
+                       class="font-semibold flex items-center gap-2 hover:text-brandYellow transition">
+                        My Curriculum Vitae <span class="text-xl">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-brandBlue text-white py-12 px-6 text-center">
+        <p class="opacity-50 text-sm">© 2026 Giras Matahari. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // === DATA PROJECT ===
+        // Nilai "type" harus sama dengan parameter di project-detail.html
+        const projects = [
+            {
+                type: 'scfs',
+                name: 'SCFS',
+                subtitle: 'Supply Chain Financing System',
+                category: 'Web Development',
+                year: '2026',
+                thumb: 'assets/components/images/scfs-5.png',
+                desc: 'Platform digital yang menyederhanakan kerja sama antara perusahaan pembeli dan pemasok, mulai dari pemesanan barang, persetujuan, pemantauan pengiriman, hingga penyelesaian pembayaran.',
+                tech: ['Laravel 12', 'Livewire 4', 'TailwindCSS', 'MySQL']
+            },
+            {
+                type: 'sipetam',
+                name: 'SIPETAM',
+                subtitle: 'Sistem Pemesanan Tanah Makam',
+                category: 'Web Development',
+                year: '2026',
+                thumb: 'assets/components/images/sipetam-1.png',
+                desc: 'Aplikasi web yang mendigitalkan manajemen pemakaman — pengaturan blok dan petak, data ahli waris, pemesanan, pembayaran bertahap, hingga laporan keuangan.',
+                tech: ['PHP', 'JavaScript', 'HTML', 'CSS']
+            },
+            {
+                type: 'mobile',
+                name: 'Tel-U Metaverse',
+                subtitle: 'Kampus Virtual Telkom University',
+                category: 'Mobile Application',
+                year: '2023',
+                thumb: 'assets/components/images/telu metaverse.png',
+                desc: 'Aplikasi yang memadukan teknologi Augmented Reality (AR), Virtual Reality (VR), dan Geolocation untuk pengalaman kampus virtual.',
+                tech: ['Figma', 'Unity', 'C#', 'Mozilla Hubs']
+            },
+            {
+                type: 'workout',
+                name: 'Home Workout App',
+                subtitle: 'Aplikasi Latihan di Rumah',
+                category: 'Mobile Application',
+                year: '2023',
+                thumb: 'assets/components/images/workout-8.png',
+                desc: 'Aplikasi yang membantu pengguna tetap bugar di rumah dengan panduan latihan harian tanpa alat, dilengkapi pelacakan progres yang intuitif.',
+                tech: ['Figma', 'Android Studio', 'Kotlin', 'Firebase']
+            },
+            {
+                type: 'web',
+                name: 'Hotel Sawunggaling',
+                subtitle: 'Hotel Monitoring Dashboard',
+                category: 'Web Development',
+                year: '2025',
+                thumb: 'assets/components/images/hotel-3.jpeg',
+                desc: 'Sistem monitoring hotel berbasis web yang menampilkan status dan tipe kamar, serta informasi housekeeping dan tamu secara real time.',
+                tech: ['Figma', 'Laravel', 'Vue JS', 'SQL']
+            }
+        ];
+
+        const grid = document.getElementById('projectGrid');
+        const emptyState = document.getElementById('emptyState');
+        const counter = document.getElementById('projectCount');
+
+        function cardTemplate(p) {
+            const badge = p.category === 'Mobile Application' ? 'bg-brandRed/15 text-brandRed' : 'bg-brandYellow/40 text-brandBlue';
+
+            return `
+                <a href="project-detail.html?type=${p.type}"
+                   class="reveal group flex flex-col bg-white rounded-[32px] p-4 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+
+                    <div class="relative overflow-hidden rounded-[24px] mb-5">
+                        <img src="${p.thumb}" alt="${p.name}"
+                             class="w-full h-[220px] object-cover group-hover:scale-110 transition duration-700">
+                        <span class="absolute top-4 left-4 ${badge} px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-sm">
+                            ${p.category}
+                        </span>
+                    </div>
+
+                    <div class="px-2 pb-2 flex flex-col flex-1">
+                        <div class="flex items-baseline justify-between gap-3 mb-1">
+                            <h3 class="text-xl font-bold group-hover:text-brandRed transition">${p.name}</h3>
+                            <span class="text-xs text-gray-400 font-semibold shrink-0">${p.year}</span>
+                        </div>
+                        <p class="text-xs text-gray-400 font-medium italic mb-3">${p.subtitle}</p>
+                        <p class="text-sm text-gray-600 leading-relaxed text-justify mb-5">${p.desc}</p>
+
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            ${p.tech.map(t => `<span class="text-[10px] font-semibold bg-gray-100 text-gray-600 px-2.5 py-1 rounded-lg">${t}</span>`).join('')}
+                        </div>
+
+                        <span class="mt-auto inline-flex items-center gap-2 text-sm font-bold text-brandBlue group-hover:gap-3 transition-all">
+                            Lihat Detail Project <span class="text-brandRed">→</span>
+                        </span>
+                    </div>
+                </a>
+            `;
+        }
+
+        function render(filter) {
+            const list = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+
+            grid.innerHTML = list.map(cardTemplate).join('');
+            emptyState.classList.toggle('hidden', list.length > 0);
+            counter.innerText = `${list.length} project ditampilkan`;
+
+            // Fallback bila file gambar project belum tersedia
+            grid.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', () => {
+                    img.src = "assets/components/images/project-2.jpeg";
+                }, { once: true });
+            });
+
+            observeReveal();
+        }
+
+        // === FILTER ===
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                render(btn.dataset.filter);
+            });
+        });
+
+        // === REVEAL ANIMATION ===
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        function observeReveal() {
+            document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
+        }
+
+        render('all');
+    </script>
+</body>
+</html>
