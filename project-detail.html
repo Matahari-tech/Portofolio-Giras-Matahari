@@ -48,6 +48,7 @@
             </a>
             <div class="flex items-center gap-6 font-medium text-sm">
                 <a href="projects.html" class="font-bold hover:text-brandRed transition">← Back to Projects</a>
+                <a href="view-certificate.html" class="hidden md:inline hover:text-brandRed transition">Certificates</a>
                 <a href="index.html" class="hidden md:inline hover:text-brandRed transition">Home</a>
             </div>
         </div>
@@ -165,8 +166,8 @@
             elements.category.innerText = "Mobile Application";
             elements.tech.innerText = "Figma, Unity, C#, Mozilla Hubs";
             elements.desc.innerText =
-                "Aplikasi TelU Verse merupakan aplikasi sebuah aplikasi yang terdiri dari beberapa teknologi seperti " +
-                "Augmented Reality (AR), Virtual Reality (VR), dan Geolocation.";
+                "Tel-U Verse is an application built on top of several technologies, including " +
+                "Augmented Reality (AR), Virtual Reality (VR), and Geolocation, to bring the campus experience into a virtual space.";
             
             elements.g1.src = "assets/components/images/metaverse.png";
             elements.g2.src = "assets/components/images/metaverse-2.png";
@@ -182,8 +183,8 @@
             elements.category.innerText = "Mobile Application";
             elements.tech.innerText = "Figma, Android Studio, Kotlin, Firebase";
             elements.desc.innerText =
-                "Aplikasi Home Workout dirancang untuk membantu pengguna tetap bugar di rumah dengan panduan latihan " +
-                "harian tanpa alat. Fokus pada user experience yang memotivasi dan pelacakan progres yang intuitif.";
+                "The Home Workout app is designed to help users stay fit at home with daily equipment-free workout " +
+                "guidance. It focuses on a motivating user experience and intuitive progress tracking.";
             
             elements.g1.src = "assets/components/images/workout-1.png";
             elements.g2.src = "assets/components/images/workout-5.png";
@@ -197,15 +198,15 @@
             elements.tag.innerText = "Website Development";
             elements.title.innerText = "SIPETAM";
             elements.category.innerText = "Web Development";
-            elements.tech.innerText = "PHP, JavaScript, HTML, css";
+            elements.tech.innerText = "PHP, JavaScript, HTML, CSS";
             elements.desc.innerText =
-                "SIPETAM (Sistem Pemesanan Tanah Makam) adalah aplikasi berbasis web yang mendigitalkan manajemen pemakaman " +
-                "dari awal hingga akhir — mulai dari mengatur blok dan petak pemakaman dengan status ketersediaan real-time, " +
-                "mencatat data ahli waris dan almarhum, pemesanan petak, hingga pemrosesan pembayaran (uang muka, cicilan, " +
-                "dan pembayaran penuh) lengkap dengan cetak struk, serta menghasilkan laporan keuangan yang bisa diekspor ke " +
-                "PDF dan Excel. Sistem ini memiliki kontrol akses berbasis peran untuk tiga jenis pengguna (Admin, Keuangan, " +
-                "dan Manajer), alur persetujuan harga bertingkat dengan riwayat perubahan lengkap, notifikasi di dalam " +
-                "aplikasi, dan dashboard analitik yang merangkum okupansi petak dan pembayaran yang tertunda.";
+                "SIPETAM (Cemetery Plot Booking System) is a web-based application that digitalises cemetery management " +
+                "end to end — from arranging burial blocks and plots with real-time availability status, recording " +
+                "next-of-kin and deceased data, and booking plots, through to processing payments (down payment, " +
+                "instalments, and full settlement) complete with receipt printing, as well as generating financial reports " +
+                "that can be exported to PDF and Excel. The system provides role-based access control for three user types " +
+                "(Admin, Finance, and Manager), a tiered price approval flow with a complete change history, in-app " +
+                "notifications, and an analytics dashboard summarising plot occupancy and outstanding payments.";
 
             elements.g1.src = "assets/components/images/sipetam-1.png";
             elements.g2.src = "assets/components/images/logo-itb.jpeg";
@@ -221,10 +222,9 @@
             elements.category.innerText = "Web Development";
             elements.tech.innerText = "PHP 8.3, SQL (MySQL), JavaScript (ES6+), HTML5, CSS3, Laravel 12, Livewire 4, TailwindCSS 3, Vite 7, MySQL (Eloquent ORM), Redis";
             elements.desc.innerText =
-                "Saya terlibat dalam pengembangan SCFS (Supply Chain Financing System), sebuah platform digital yang " +
-                "menyederhanakan proses kerja sama antara perusahaan pembeli dan para pemasoknya — mulai dari pemesanan " +
-                "barang, persetujuan, pemantauan pengiriman, hingga penyelesaian pembayaran, semuanya dalam satu sistem " +
-                "yang rapi dan transparan.";
+                "I was involved in developing SCFS (Supply Chain Financing System), a digital platform that streamlines " +
+                "collaboration between a buyer company and its suppliers — from purchase ordering, approval, and delivery " +
+                "tracking through to payment settlement, all within a single, well-organised and transparent system.";
 
             elements.g1.src = "assets/components/images/scfs-5.png";
             elements.g2.src = "assets/components/images/scfs-1.jpeg";
@@ -241,8 +241,8 @@
             elements.category.innerText = "Web Development";
             elements.tech.innerText = "Figma, PHP, Laravel, CSS, SQL, Vue JS";
             elements.desc.innerText =
-                "Membangun sistem monitoring hotel berbasis web yang menampilkan status dan tipe kamar, serta " +
-                "informasi housekeeping dan tamu secara real time.";
+                "Building a web-based hotel monitoring system that displays room status and types alongside " +
+                "housekeeping and guest information in real time.";
 
             elements.g1.src = "assets/components/images/hotel-3.jpeg";
             elements.g2.src = "assets/components/images/hotel-1.jpg";
@@ -251,7 +251,7 @@
         }
 
         // === RELATED WORKS ===
-        // Menampilkan project lain, project yang sedang dibuka tidak ikut ditampilkan
+        // Shows the other projects; the one currently open is excluded
         const allProjects = [
             { type: 'mobile', name: 'Tel-U Metaverse', thumb: 'assets/components/images/telu metaverse.png' },
             { type: 'web', name: 'Hotel Sawunggaling', thumb: 'assets/components/images/hotel-3.jpeg' },
@@ -273,7 +273,7 @@
                 </a>
             `).join('');
 
-        // Fallback bila file gambar project belum tersedia
+        // Fallback when a project image file is not available yet
         document.querySelectorAll('main img').forEach(img => {
             img.addEventListener('error', () => {
                 img.src = "assets/components/images/project-2.jpeg";

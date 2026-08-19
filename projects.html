@@ -52,6 +52,7 @@
             <div class="hidden md:flex gap-8 font-medium">
                 <a href="index.html" class="hover:text-brandRed transition">Landing</a>
                 <a href="projects.html" class="border-b-2 border-brandYellow text-brandBlue">Projects</a>
+                <a href="view-certificate.html" class="hover:text-brandRed transition">Certificates</a>
                 <a href="about.html" class="hover:text-brandRed transition">About</a>
             </div>
             <a href="index.html" class="md:hidden text-sm font-bold hover:text-brandRed transition">← Back</a>
@@ -64,12 +65,12 @@
             <header class="reveal mb-14">
                 <p class="text-brandRed font-bold text-xs uppercase tracking-[0.3em] mb-3">My Portfolio</p>
                 <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Project yang <br class="hidden lg:block"> Sudah Saya Buat
+                    Projects I Have <br class="hidden lg:block"> Built So Far
                 </h1>
                 <p class="text-gray-600 text-lg max-w-2xl leading-relaxed text-justify">
-                    Kumpulan karya dari proses desain sampai implementasi — mulai dari aplikasi mobile,
-                    sistem informasi berbasis web, hingga platform internal perusahaan.
-                    Klik salah satu project untuk melihat detailnya.
+                    A collection of work spanning design to implementation — from mobile applications and
+                    web-based information systems to internal company platforms.
+                    Click any project to see its details.
                 </p>
                 <div class="w-20 h-1.5 bg-brandYellow rounded-full mt-8"></div>
             </header>
@@ -90,19 +91,19 @@
             <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 
             <div id="emptyState" class="hidden text-center py-20 text-gray-400 font-medium">
-                Belum ada project pada kategori ini.
+                No projects available in this category yet.
             </div>
 
             <div class="reveal mt-24 bg-brandBlue text-white rounded-[40px] px-8 lg:px-16 py-14 text-center">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Tertarik Bekerja Sama?</h2>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Interested in Working Together?</h2>
                 <p class="opacity-70 max-w-xl mx-auto mb-8">
-                    Saya terbuka untuk peluang baru, kolaborasi, maupun project freelance.
-                    Mari diskusikan kebutuhan Anda.
+                    I am open to new opportunities, collaborations, and freelance projects.
+                    Let's talk about what you need.
                 </p>
                 <div class="flex flex-wrap justify-center items-center gap-4">
                     <a href="https://wa.me/6282116218252" target="_blank"
                        class="bg-brandYellow text-brandBlue px-8 py-3 rounded-xl font-bold shadow-lg hover:scale-105 transition">
-                        Hubungi Saya
+                        Contact Me
                     </a>
                     <a href="assets/components/pdf/CV_ATS_GIRAS_MATAHARI.pdf" target="_blank"
                        class="font-semibold flex items-center gap-2 hover:text-brandYellow transition">
@@ -118,8 +119,8 @@
     </footer>
 
     <script>
-        // === DATA PROJECT ===
-        // Nilai "type" harus sama dengan parameter di project-detail.html
+        // === PROJECT DATA ===
+        // The "type" value must match the parameter used in project-detail.html
         const projects = [
             {
                 type: 'scfs',
@@ -128,37 +129,37 @@
                 category: 'Web Development',
                 year: '2026',
                 thumb: 'assets/components/images/scfs-5.png',
-                desc: 'Platform digital yang menyederhanakan kerja sama antara perusahaan pembeli dan pemasok, mulai dari pemesanan barang, persetujuan, pemantauan pengiriman, hingga penyelesaian pembayaran.',
+                desc: 'A digital platform that streamlines collaboration between buyer companies and their suppliers, covering purchase ordering, approval, delivery tracking, and payment settlement.',
                 tech: ['Laravel 12', 'Livewire 4', 'TailwindCSS', 'MySQL']
             },
             {
                 type: 'sipetam',
                 name: 'SIPETAM',
-                subtitle: 'Sistem Pemesanan Tanah Makam',
+                subtitle: 'Cemetery Plot Booking System',
                 category: 'Web Development',
                 year: '2026',
                 thumb: 'assets/components/images/sipetam-1.png',
-                desc: 'Aplikasi web yang mendigitalkan manajemen pemakaman — pengaturan blok dan petak, data ahli waris, pemesanan, pembayaran bertahap, hingga laporan keuangan.',
+                desc: 'A web application that digitalises cemetery management — block and plot arrangement, next-of-kin records, bookings, instalment payments, and financial reporting.',
                 tech: ['PHP', 'JavaScript', 'HTML', 'CSS']
             },
             {
                 type: 'mobile',
                 name: 'Tel-U Metaverse',
-                subtitle: 'Kampus Virtual Telkom University',
+                subtitle: 'Telkom University Virtual Campus',
                 category: 'Mobile Application',
                 year: '2023',
                 thumb: 'assets/components/images/telu metaverse.png',
-                desc: 'Aplikasi yang memadukan teknologi Augmented Reality (AR), Virtual Reality (VR), dan Geolocation untuk pengalaman kampus virtual.',
+                desc: 'An application combining Augmented Reality (AR), Virtual Reality (VR), and Geolocation technologies to deliver a virtual campus experience.',
                 tech: ['Figma', 'Unity', 'C#', 'Mozilla Hubs']
             },
             {
                 type: 'workout',
                 name: 'Home Workout App',
-                subtitle: 'Aplikasi Latihan di Rumah',
+                subtitle: 'Work Out From Home Application',
                 category: 'Mobile Application',
                 year: '2023',
                 thumb: 'assets/components/images/workout-8.png',
-                desc: 'Aplikasi yang membantu pengguna tetap bugar di rumah dengan panduan latihan harian tanpa alat, dilengkapi pelacakan progres yang intuitif.',
+                desc: 'An application that helps users stay fit at home with daily equipment-free workout guidance and intuitive progress tracking.',
                 tech: ['Figma', 'Android Studio', 'Kotlin', 'Firebase']
             },
             {
@@ -168,7 +169,7 @@
                 category: 'Web Development',
                 year: '2025',
                 thumb: 'assets/components/images/hotel-3.jpeg',
-                desc: 'Sistem monitoring hotel berbasis web yang menampilkan status dan tipe kamar, serta informasi housekeeping dan tamu secara real time.',
+                desc: 'A web-based hotel monitoring system that displays room status and types alongside housekeeping and guest information in real time.',
                 tech: ['Figma', 'Laravel', 'Vue JS', 'SQL']
             }
         ];
@@ -205,7 +206,7 @@
                         </div>
 
                         <span class="mt-auto inline-flex items-center gap-2 text-sm font-bold text-brandBlue group-hover:gap-3 transition-all">
-                            Lihat Detail Project <span class="text-brandRed">→</span>
+                            View Project Details <span class="text-brandRed">→</span>
                         </span>
                     </div>
                 </a>
@@ -217,9 +218,9 @@
 
             grid.innerHTML = list.map(cardTemplate).join('');
             emptyState.classList.toggle('hidden', list.length > 0);
-            counter.innerText = `${list.length} project ditampilkan`;
+            counter.innerText = `${list.length} project${list.length === 1 ? '' : 's'} shown`;
 
-            // Fallback bila file gambar project belum tersedia
+            // Fallback when a project image file is not available yet
             grid.querySelectorAll('img').forEach(img => {
                 img.addEventListener('error', () => {
                     img.src = "assets/components/images/project-2.jpeg";
